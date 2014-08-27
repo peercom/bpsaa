@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  lamp: MyString
+  length: 1
+  suspension_distance: 1
+  article_number: MyString
+  eei: MyString
+  type: 
+  degrees: 1
+  fitting: MyString
+  systemtype: MyString
+  housing: MyString
+  ceiling_cutout: MyString
+  height: 1
+  weight: 1
+  opening: 1
+  diameter: 1
+  led: MyString
+  color: MyString
+  angle: 1
+  holder: MyString
+  space_required: 1
+  head: MyString
+  dimensions: MyString
+  light_temperature: MyString
+  transformer: MyString
+  panel_width: MyString
+  panel_length: MyString
+  format: MyString
+
+two:
+  name: MyString
+  description: MyText
+  lamp: MyString
+  length: 1
+  suspension_distance: 1
+  article_number: MyString
+  eei: MyString
+  type: 
+  degrees: 1
+  fitting: MyString
+  systemtype: MyString
+  housing: MyString
+  ceiling_cutout: MyString
+  height: 1
+  weight: 1
+  opening: 1
+  diameter: 1
+  led: MyString
+  color: MyString
+  angle: 1
+  holder: MyString
+  space_required: 1
+  head: MyString
+  dimensions: MyString
+  light_temperature: MyString
+  transformer: MyString
+  panel_width: MyString
+  panel_length: MyString
+  format: MyString

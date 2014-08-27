@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  string,: MyString
+  description: MyString
+  text,: MyString
+  system_id: MyString
+  integer,: MyString
+  image: MyString
+  string,: MyString
+  assembly_instruction: MyString
+  string,: MyString
+  sectional_view: MyString
+  string: MyString
+
+two:
+  name: MyString
+  string,: MyString
+  description: MyString
+  text,: MyString
+  system_id: MyString
+  integer,: MyString
+  image: MyString
+  string,: MyString
+  assembly_instruction: MyString
+  string,: MyString
+  sectional_view: MyString
+  string: MyString
