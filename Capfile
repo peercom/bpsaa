@@ -15,7 +15,6 @@ require 'capistrano/deploy'
 #   https://github.com/capistrano/rails
 #
 
-set :rvm_ruby_version, '2.0.0-p195'
 
 require 'capistrano/rvm'
 # require 'capistrano/rbenv'
