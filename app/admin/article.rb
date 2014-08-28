@@ -29,10 +29,10 @@ ActiveAdmin.register Article do
       menu :priority => 15
       form do |f|
         f.inputs "Details" do
-          f.input :product
-          f.input :article_number
+          f.input :product, :label => 'Produkt', :as => :select, :collection => Product.all.map{|p| ["#{p.system.name}, #{p.name}", p.id]}
+          f.input :article_number, :label => "Artikelnummer"
           f.input :lamp, :label => "Leuchtmittel"
-          f.input :length
+          f.input :length, :label => "Länge"
           f.input :eei
           f.input :suspension_distance, :label => "Seilabstand"
           f.input :light_temperature, :label => "Lichtfarbe"
