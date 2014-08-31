@@ -4,7 +4,7 @@ ActiveAdmin.register Article do
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :product_id, :name, :description, :lamp, :length, :suspension_distance, :ugr, :ugr1, :article_number, :eei, :degree, :fitting, :light_temperature
+  permit_params :product_id, :name, :description, :lamp, :length, :efficiency, :suspension_distance, :ugr, :ugr1, :article_number, :eei, :degree, :fitting, :light_temperature
   #
   # or
   #
@@ -34,6 +34,7 @@ ActiveAdmin.register Article do
           f.input :lamp, :label => "Leuchtmittel"
           f.input :length, :label => "Länge"
           f.input :eei
+          f.input :efficiency
           f.input :suspension_distance, :label => "Seilabstand"
           f.input :light_temperature, :label => "Lichtfarbe"
           f.input :ugr
