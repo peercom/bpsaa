@@ -27,6 +27,17 @@ ActiveAdmin.register Product do
   
   ActiveAdmin.register Product do
       menu :priority => 14
+      form do |f|
+        f.inputs "Details" do
+          f.input :system, :label => 'System', :as => :select, :collection => System.all.map{|s| ["#{s.category.name}, #{s.name}", s.id]}
+          f.input :name, :label => 'Name'
+          f.input :description
+          f.input :image
+          f.input :assembly_instruction, :label => "Anleitung"
+          f.input :sectional_view, :label => "Zeichnung"
+        end
+        f.actions
+      end
   end
   
 end
