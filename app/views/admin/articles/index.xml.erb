@@ -1,0 +1,12 @@
+<?xml version="1.0" ?> 
+<articles>
+<% @articles.each do | article | %>
+<article>
+	<system><%= article.product.system.name %></system>
+	<product><%= article.product.name %></product>
+	<% article.attributes.each_pair do |name, value| %>
+		<<%= name %>><%= value %></<%= name %>>
+	<% end %>
+</article>
+<% end %>
+</articles>
