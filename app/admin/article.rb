@@ -25,6 +25,8 @@ ActiveAdmin.register Article do
       actions
   end
   
+  filter :product, :as => :select, :collection => Product.all.map{|p| ["#{p.system.category.name}: #{p.system.name}, #{p.name}", p.id]}
+  
   ActiveAdmin.register Article do
       menu :priority => 15
       form do |f|
