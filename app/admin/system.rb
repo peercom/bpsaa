@@ -13,6 +13,15 @@ ActiveAdmin.register System do
   #  permitted
   # end
   
+  index do
+    column :id
+    column "Kategorie" do |system|
+      system.category.name
+    end
+    column :name
+    actions
+  end
+  
   ActiveAdmin.register System do
       menu :priority => 13
   end
