@@ -40,7 +40,7 @@ ActiveAdmin.register Article do
           f.input :efficiency, :label => "Wirkungsgrad"
           f.input :space_required, :label => "Platzbedarf"
           f.input :dimensions, :label => "Maße"
-          f.input :suspension_distance, :label => "Seilabstand"
+          f.input :suspension_distance, :label => "Seilabstand / Befestigungsabstand"
           f.input :light_temperature, :label => "Lichtfarbe"
           f.input :ugr
           f.input :ugr1
