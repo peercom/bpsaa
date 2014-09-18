@@ -25,13 +25,13 @@ ActiveAdmin.register Article do
       actions
   end
   
-  filter :product, :as => :select, :collection => Product.all.map{|p| ["#{p.system.category.name}: #{p.system.name}, #{p.name}", p.id]}
+  filter :product, :as => :select, :collection => Product.order(:system_id).order(:name).map{|p| ["#{p.system.category.name}: #{p.system.name}, #{p.name}", p.id]}
   
   ActiveAdmin.register Article do
       menu :priority => 15
       form do |f|
         f.inputs "Details" do
-          f.input :product, :label => 'Produkt', :as => :select, :collection => Product.all.map{|p| ["#{p.system.name}, #{p.name}", p.id]}
+          f.input :product, :label => 'Produkt', :as => :select, :collection => Product.all.map{|p| ["#{p.system.category.name}: #{p.system.name}, #{p.name}", p.id]}
           f.input :article_number, :label => "Artikelnummer"
           f.input :lamp, :label => "Leuchtmittel"
           f.input :length, :label => "Länge"
