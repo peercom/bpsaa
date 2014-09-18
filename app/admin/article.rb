@@ -29,7 +29,7 @@ ActiveAdmin.register Article do
       actions
   end
   
-  filter :product, :as => :select, :collection => Product.order(:system_id).order(:name).map{|p| ["#{p.system.category.name}: #{p.system.name}, #{p.name}", p.id]}
+  filter :product, :as => :select, :collection => proc { Product.order(:system_id).order(:name).map{|p| ["#{p.system.category.name}: #{p.system.name}, #{p.name}", p.id]}}
   
   ActiveAdmin.register Article do
       menu :priority => 15
