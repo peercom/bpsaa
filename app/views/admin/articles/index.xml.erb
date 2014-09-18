@@ -3,15 +3,15 @@
 	<systemname><%= @articles.first.product.system.name %></systemname>
 	<product>
 		<productname><%= @articles.first.product.name %></productname>
-		<articles>
-			<% @articles.each do | article | %>
-			<article>
-				<product><%= article.product.name %></product>
-				<% article.attributes.each_pair do |name, value| %>
-				<<%= name %>><%= value %></<%= name %>>
-				<% end %>
-			</article>
-			<% end %>
-		</articles>
 	</product>
+	<articles>
+		<% @articles.each do | article | %>
+		<article>
+			<product><%= article.product.name %></product>
+			<% article.attributes.each_pair do |name, value| %>
+			<<%= name %>><%= value %></<%= name %>>
+			<% end %>
+		</article>
+		<% end %>
+	</articles>
 </system>
