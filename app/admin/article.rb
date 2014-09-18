@@ -16,10 +16,14 @@ ActiveAdmin.register Article do
   
   index do
       column "Artikelnummer", :article_number
+      column "Kategorie" do |article|
+        article.product.system.category.name
+      end
       column "System" do |article|
         article.product.system.name
       end
       column "Produkt", :product
+      column "Länge", :length
       column "Leuchtmittel", :lamp
       column "EEI", :eei
       actions
