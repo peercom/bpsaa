@@ -1,17 +1,18 @@
 <?xml version="1.0" ?> 
-<system>
-	<systemname><%= @articles.first.product.system.name %></systemname>
-	<product>
+<systemdata>
+	<system>
+		<systemname><%= @articles.first.product.system.name %></systemname>
 		<productname><%= @articles.first.product.name %></productname>
-	</product>
-	<articles>
-		<% @articles.each do | article | %>
-		<article>
-			<product><%= article.product.name %></product>
-			<% article.attributes.each_pair do |name, value| %>
-			<<%= name %>><%= value %></<%= name %>>
+		<image href="file://nothing/here/"></image>
+		<articles>
+			<% @articles.each do | article | %>
+			<article>
+				<product><%= article.product.name %></product>
+				<% article.attributes.each_pair do |name, value| %>
+					<<%= name %>><%= value %></<%= name %>>
+				<% end %>
+			</article>
 			<% end %>
-		</article>
-		<% end %>
-	</articles>
-</system>
+		</articles>
+	</system>
+</systemdata>
