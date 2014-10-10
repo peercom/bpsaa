@@ -14,6 +14,7 @@ ActiveAdmin.register Category do
   #  permitted
   # end
   
+  
   ActiveAdmin.register Category do
       menu :priority => 12
   end

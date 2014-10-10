@@ -13,6 +13,7 @@ ActiveAdmin.register System do
   #  permitted
   # end
   
+  
   index do
     column :id
     column "Kategorie" do |system|

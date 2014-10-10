@@ -15,6 +15,7 @@ ActiveAdmin.register Product do
   #  permitted
   # end
   
+  
   index do
       column :name
       column :system

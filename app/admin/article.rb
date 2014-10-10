@@ -14,6 +14,7 @@ ActiveAdmin.register Article do
   #  permitted
   # end
   
+  
   index do
       column "Artikelnummer", :article_number
       column "Kategorie" do |article|

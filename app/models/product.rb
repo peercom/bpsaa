@@ -8,4 +8,6 @@ class Product < ActiveRecord::Base
   
   mount_uploader :ldt, LdtUploader
   
+  has_paper_trail
+  
 end
