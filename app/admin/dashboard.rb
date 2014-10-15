@@ -7,7 +7,7 @@ ActiveAdmin.register_page "Dashboard" do
     # app/admin/dashboard.rb
     section "Letzte Änderungen" do
       table_for PaperTrail::Version.order('id desc').limit(20) do # Use PaperTrail::Version if this throws an error
-        column ("Item") { |v| v.item }
+        column ("Item") { |v| v.item.try(:name) }
         #column ("Item") { |v| link_to v.item, [:admin, v.item] } # Uncomment to display as link
         column ("Vorgang") { |v| v.event }
         column ("Typ") { |v| v.item_type.underscore.humanize }
