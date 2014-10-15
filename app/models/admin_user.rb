@@ -6,4 +6,7 @@ class AdminUser < ActiveRecord::Base
          
   has_paper_trail
   
+  def admin_permalink
+      admin_admin_user_path(self)
+  end
 end

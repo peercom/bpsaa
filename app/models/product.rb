@@ -10,4 +10,8 @@ class Product < ActiveRecord::Base
   
   has_paper_trail
   
+  def admin_permalink
+      admin_product_path(self)
+  end
+  
 end

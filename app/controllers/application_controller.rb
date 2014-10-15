@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protected
   
   def user_for_paper_trail
-      admin_user_signed_in? ? current_admin_user : 'Unbekannter Nutzer'
+      admin_user_signed_in? ? current_admin_user.email : 'Unbekannter Nutzer'
   end
   
 end

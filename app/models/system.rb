@@ -7,4 +7,8 @@ class System < ActiveRecord::Base
   
   has_paper_trail
   
+  def admin_permalink
+      admin_system_path(self)
+  end
+  
 end

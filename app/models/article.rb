@@ -5,4 +5,8 @@ class Article < ActiveRecord::Base
    
    has_paper_trail
    
+   def admin_permalink
+       admin_article_path(self)
+   end
+   
 end

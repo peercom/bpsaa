@@ -5,4 +5,8 @@ class Category < ActiveRecord::Base
   
   has_paper_trail
   
+  def admin_permalink
+      admin_category_path(self)
+  end
+  
 end
