@@ -1,9 +1,9 @@
 # encoding: utf-8
 
-class LdtUploader < CarrierWave::Uploader::Base
+class LdtzipUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  include CarrierWave::RMagick
+  # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
@@ -39,7 +39,7 @@ class LdtUploader < CarrierWave::Uploader::Base
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_white_list
-     %w(emf)
+     %w(zip)
   end
 
   # Override the filename of the uploaded files:

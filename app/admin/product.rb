@@ -5,7 +5,7 @@ ActiveAdmin.register Product do
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :name, :description, :system_id, :image, :assembly_instruction, :sectional_view, :ldt
+  permit_params :name, :description, :system_id, :image, :assembly_instruction, :sectional_view, :ldt, :ldtzip
   #
   # or
   #
@@ -36,7 +36,9 @@ ActiveAdmin.register Product do
           f.input :image
           f.input :assembly_instruction, :label => "Anleitung"
           f.input :sectional_view, :label => "Zeichnung"
-          f.input :ldt
+          f.input :ldt, :label => "LDT emf"
+          f.input :ldtzip, :label => "LDT zip"
+          
         end
         f.actions
       end

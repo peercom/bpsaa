@@ -7,6 +7,7 @@ class Product < ActiveRecord::Base
   validates_presence_of :system
   
   mount_uploader :ldt, LdtUploader
+  mount_uploader :ldtzip, LdtzipUploader
   
   has_paper_trail
   
