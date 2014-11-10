@@ -135,6 +135,18 @@ de:
       admin_user:
         one: Administrator
         other: Administratoren
+      category:
+        one: Kategorie
+        other: Kategorien
+      system:
+        one: System
+        other: Systeme
+      product:
+        one: Produkt
+        other: Produkte
+      article:
+        one: Artikel
+        other: Artikel
   formtastic:
     yes: "Ja"
     no: "Nein"
