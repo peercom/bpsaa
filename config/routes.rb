@@ -5,7 +5,7 @@ Aa::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  #root 'admin#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -14,7 +14,14 @@ Aa::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  resources :news_items
+
+  get 'about_us' => "welcome#about_us"
+  get 'impressum' => "welcome#imprint"
+  get 'privacy' => "welcome#privacy"
+  get 'terms' => "welcome#terms"
+  get 'philosophy' => "welcome#philosophy"
+  get 'quality' => "welcome#quality"
 
   # Example resource route with options:
   #   resources :products do

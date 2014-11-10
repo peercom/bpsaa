@@ -16,7 +16,7 @@ ActiveAdmin.register Category do
   
   
   ActiveAdmin.register Category do
-      menu :priority => 12
+      menu :parent => "Produkte", :priority => 12
   end
   
 end

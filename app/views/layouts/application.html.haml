@@ -1,0 +1,56 @@
+!!!
+%html
+  %head
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
+    = csrf_meta_tag
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application" 
+    = javascript_include_tag "http://code.jquery.com/jquery-migrate-1.2.1.js"
+    = yield :head
+    %title
+      -default_content_for :title do
+        BPS Leuchten
+  %body.bp
+    #outer
+      #wrapper
+        #main
+          #language-switch
+            %ul
+              %li
+                = link_to("de", "#")
+              %li
+                = link_to("en", "#")
+              / %li{:class => "last"}
+              /   = link_to("ru", i18n_link(request.path, "ru"))
+          #navigation
+            %ul
+              %li
+                = link_to t("navigation.home"), root_path
+              %li
+                = link_to t("navigation.news"), news_items_path
+              %li
+                = link_to t("navigation.about-us"), about_us_path
+              %li
+                = link_to t("navigation.products"), "#"
+              %li
+                = link_to t("navigation.references"), "#"
+              %li
+                = link_to t("navigation.search"), "#"
+              %li
+                = link_to t("navigation.service"), "#"
+            .clearer
+        
+          #content
+            = yield
+            .clearer
+            #bottom-navigation
+              %ul
+                %li#imprint
+                  = link_to t("navigation.imprint"), "/impressum"
+                %li#term
+                  =link_to t("navigation.terms"), "/terms"
+                %li#privacy
+                  =link_to t("navigation.privacy"), "/privacy"  
+              .clearer
+        #sidebar
+          = yield(:sidebar)

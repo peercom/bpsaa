@@ -27,7 +27,7 @@ ActiveAdmin.register AdminUser do
   end
   
   ActiveAdmin.register AdminUser do
-      menu :priority => 11
+      menu :parent => "Admin", :priority => 11
   end
 
 end

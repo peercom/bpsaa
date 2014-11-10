@@ -27,7 +27,7 @@ ActiveAdmin.register Product do
   
   
   ActiveAdmin.register Product do
-      menu :priority => 14
+      menu :parent => "Produkte", :priority => 14
       form do |f|
         f.inputs "Details" do
           f.input :system, :label => 'System', :as => :select, :collection => System.all.map{|s| ["#{s.category.name}, #{s.name}", s.id]}

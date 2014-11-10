@@ -1,0 +1,23 @@
+#willkommen{:class => 'hello'}
+  - unless @slides.empty?
+    - @slides.each_with_index do |slide,index|
+      = image_tag(slide.image.url, :size => "700x400", :class => index == 0 ? "first" : "")
+  - else
+    - (1..11).each do |i|
+      = image_tag( "/slideshow/slide%02i.jpg" % i, :size => "700x400", :class => i == 0 ? "first" : "")
+-content_for :sidebar do
+  #news
+    .news-wrapper
+      %h2
+        = t('home.news')
+      - @news_items.each do |news_item|
+        .news-item
+          %h3
+            = h news_item.title
+          %p
+            = news_item.teaser.html_safe
+          - if news_item.system_id.blank?
+            = link_to "#{t "more"}&nbsp;&gt;&gt;".html_safe, news_items_path(:anchor => "news-item-#{news_item.id}")
+          - else
+            = link_to "#{t "more"}&nbsp;&gt;&gt;".html_safe, landingpage_system_path(news_item.system_id)
+  

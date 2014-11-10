@@ -33,7 +33,7 @@ ActiveAdmin.register Article do
   filter :product, :as => :select, :collection => proc { Product.order(:system_id).order(:name).map{|p| ["#{p.system.category.name}: #{p.system.name}, #{p.name}", p.id]}}
   
   ActiveAdmin.register Article do
-      menu :priority => 15
+      menu :parent => "Produkte", :priority => 15
       form do |f|
         f.inputs "Details" do
           f.input :product, :label => 'Produkt', :as => :select, :collection => Product.all.map{|p| ["#{p.system.category.name}: #{p.system.name}, #{p.name}", p.id]}

@@ -24,7 +24,7 @@ ActiveAdmin.register System do
   end
   
   ActiveAdmin.register System do
-      menu :priority => 13
+      menu :parent => "Produkte", :priority => 13
   end
   
 end

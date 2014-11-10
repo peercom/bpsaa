@@ -1,0 +1,650 @@
+@import blueprint/reset
+@import blueprint
+@import partials/base.sass
+@import compass/utilities/lists
+
+
+@font-face
+  font-family: 'Elektra Light Pro'
+  src: url(etelkalightprobold-webfont.eot)
+  src: local('☺'), url(etelkalightprobold-webfont.woff) format('woff'), url(etelkalightprobold-webfont.ttf) format('truetype'), url(etelkalightprobold-webfont.svg#webfont) format('svg')
+  font-weight: bold
+  font-style: normal
+
+
+@font-face
+  font-family: 'Elektra Light'
+  src: url(etelkalight-webfont.eot)
+  src: local('☺'), url(etelkalight-webfont.woff) format('woff'), url(etelkalight-webfont.ttf) format('truetype'), url(etelkalight-webfont.svg#webfont) format('svg')
+  font-weight: normal
+  font-style: normal
+
+//+blueprint-typography("body.bp")
+
+#welcome_sidebar_image 
+  position: absolute
+  width: 230px
+  top: 417px
+  height: 135px
+
+#lp_sidebar
+  position: absolute
+  width: 230px
+  top: 382px
+  background-color: #404040
+  height: 135px
+  padding: 9px
+  color: #b8b8b8
+  h3
+    color: #b8b8b8
+  a
+    color: #b8b8b8 !important
+
+div.clearer
+  clear: both
+  
+body.bp
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+  +blueprint-typography(true)
+  // +showgrid
+
+#outer
+  margin: 0 auto
+  width: 960px
+h1, h2, h3, h4, h5, h6
+  font-family: "Elektra Light","Trebuchet MS", Verdana, Arial, Helvetica, sans-serif
+  text-transform: uppercase
+  
+#wrapper.showgrid
+  +showgrid
+#wrapper
+  +container
+  padding-top: 24px
+  a
+    color: #475152
+    text-decoration: none
+  a:hover
+    color: $our_red
+  a.current
+    color: $our_red
+  #backlink
+    height: 20px
+    margin-top: -20px
+
+form.bp
+  +blueprint-form
+#main
+  +column($blueprint_grid_columns * 0.75)
+#sidebar
+  +column($blueprint_grid_columns * 0.25, true)
+  padding-top: 98px
+  background-image: url(bps_logo.png)
+  background-repeat: no-repeat
+  background-position: 0 2px
+  a
+    color: #475152
+    text-decoration: none
+  a:hover
+    color: $our_red
+  a.current
+    color: $our_red
+  h2
+    font-size: 16px
+    line-height: 18px
+    padding-top: 10px
+    color: #b3bbbd
+    span.darker
+      color: #455052
+  h2#longtext
+    padding-top: 185px
+  h3
+    font-size: 12px
+    margin-bottom: 4px
+  #news
+    .news-wrapper
+      background-color: #404040
+      margin-top: 13px
+      padding-left: 5px
+      height: 265px
+      overflow: hidden
+      h2
+        color: #b8b8b8
+        padding: 4px
+        font-size: 14px
+      .news-item
+        padding: 4px
+        margin-bottom: 10px
+        img
+          float: left
+          margin-right: 5px
+        p
+          margin: 0
+          color: #b8b8b8
+        h3
+          color: #b8b8b8
+        a
+          color: #b8b8b8
+
+#content
+  padding-top: 35px
+  #willkommen
+    width: 700px
+    height: 400px
+    // background-image: url(/images/new_welcome.jpg)
+
+    
+    h2
+      padding-left: 15px
+      padding-top: 15px
+      color: #ffffff
+  .push
+    +span(6)
+    h2
+      +push(18)
+
+div#language-switch
+  ul
+    +horizontal-list
+    font-family: "Elektra Light","Trebuchet MS", Verdana, Arial, Helvetica, sans-serif
+    text-transform: uppercase
+    padding-bottom: 20px
+    li
+      font-size: 12px
+div#navigation
+  ul
+    +horizontal-list
+    font-family: "Elektra Light","Trebuchet MS", Verdana, Arial, Helvetica, sans-serif
+    text-transform: uppercase
+    padding-bottom: 20px
+    li
+      padding-right: 32px
+      font-size: 12px
+div#bottom-navigation
+  ul
+    +horizontal-list
+    font-family: "Elektra Light","Trebuchet MS", Verdana, Arial, Helvetica, sans-serif
+    text-transform: uppercase
+    padding-top: 25px
+    padding-bottom: 20px
+    li
+      padding-right: 32px
+      font-size: 12px
+    
+#images
+  +column($blueprint_grid_columns * 0.25)
+  #building
+    padding-top: 30px
+#about-us
+  margin-top: 25px
+  +column(13)
+  // +column(!blueprint_grid_columns * 0.5, true)
+  // p
+  //   color= !font_color
+  // h2,h3
+  //   color= !font_color
+  //   margin-top: 50px
+  // h2
+  //   font-size: 22px
+  // h2.first
+  //   margin-top: -10px
+// #imprint
+//   font-family: "Elektra Light","Trebuchet MS", Verdana, Arial, Helvetica, sans-serif
+//   text-transform: uppercase
+//   font-size: 12px
+//   padding-top: 25px
+//   padding-bottom: 25px
+#small-images
+  +column(4)
+  img
+    padding-top: 110px
+    
+div.imprint-block
+  padding-top: 20px
+
+div.variant
+  a
+    img
+      margin-left: 20px
+  h3
+    font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif
+    font-size: 12px
+  .table-wrapper
+    +column(17)
+    table
+      th
+        text-transform: uppercase
+        vertical-align: top
+      th.accessory
+        text-align: left
+      th.fixed, td.fixed
+        width: 125px
+      td
+        padding-bottom: 0px
+      td.download
+        width: 60px
+        padding: 0
+        img
+          margin: 0
+      td.with-bg
+        background-color: #edefee
+        text-align: left
+        vertical-align: center
+      td#download
+        text-align: right
+        img
+          padding-left: 10px
+        a
+          padding-left: 10px
+          width: 16px
+          margin: 0
+          img
+            margin: 0
+            padding-left: 0
+      td.without-bg
+        width: 100px
+        vertical-align: top
+        padding-top: 0
+        padding-right: 0
+        text-align: right
+body.bp
+  h2.system
+    padding-top: 12px
+    font-weight: bold
+    font-size: 20px
+    span.system-number
+      color: #c6ccce
+      font-size: 14px
+      vertical-align: top
+#alternatives, #program, #accessories, #downloads, #catalog-link
+  font-family: "Elektra Light","Trebuchet MS", Verdana, Arial, Helvetica, sans-serif
+  font-size: 12px
+  line-height: 18px
+  background-color: #455052
+  color: #ffffff
+  padding: 3px
+  margin-bottom: 3px
+  a
+    color: $our_red
+    text-decoration: none
+  h3
+    font-size: 12px
+    font-weight: bold
+    color: #ffffff
+    margin-bottom: 0
+#program, #downloads, #catalog-link
+  text-transform: uppercase
+div.case-thumb
+  float: left
+  padding-right: 15px
+  padding-bottom: 15px
+
+#address
+  br
+    line-height: 12px
+#thumbs
+  +column(3)
+#text-content
+  +column(15)
+  +last
+#main-image
+  +column(18)
+  +last
+  padding-bottom: 20px
+#infowrapper
+  +column(6)
+  +last
+  #object-infos
+    border: 1px solid black
+    padding: 3px
+    font-size: 12px
+    h3
+      color: black
+      font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif
+      font-size: 12px
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      font-size: 12px
+
+#news
+  ul
+    list-style: none
+    position: relative
+    li
+      min-height: 220px
+      padding-bottom: 50px
+  .news-image
+    width: 220px
+    height: 220px
+    position: absolute
+  .news-text
+    padding-left: 250px
+    .teaser, .main-content
+      font-size: 12px
+
+  span.day
+    color: #c6cdce
+  span.month, span.year
+    color: #455052
+
+
+#application-scopes
+  list-style: none
+  li.image
+    display: inline-block
+    vertical-align: top
+    width: 165px
+  h2
+    font-size: 16px
+    line-height: 20px
+    width: 100%
+  ul.cases
+    list-style: none
+    margin-left: 0
+    li
+      margin-bottom: 10px
+
+#systems, #application-scope-systems
+  list-style: none
+  div.row
+    width: 670px
+    float: left
+  li
+    padding-bottom: 30px
+    padding-left: 10px
+    float: left
+    .system
+      width: 325px
+      img
+        float: left
+      .description
+        padding-left: 110px
+        font-size: 12px
+      .hidden-description
+        display: none
+  h3
+    padding-top: 10px
+    font-size: 16px
+
+#system-groups
+  list-style: none
+  li
+    padding-bottom: 30px
+    padding-left: 10px
+    float: left
+    div.system-group-wrapper
+      width: 325px
+      img
+        float: left
+      .description
+        padding-left: 110px
+      h3
+        padding-left: 150px
+        font-size: 16px
+
+#thumbs
+  .case-image-thumb
+    img
+      padding-bottom: 20px
+
+#contact-form
+  padding-top: 50px
+  .formrow
+    +column(18)
+    p
+      +column(9)
+      margin-bottom: 10px
+      label
+        float: left
+        width: 100px
+        margin-right: 10px
+        text-align: left
+      input
+        width: 150px
+        margin-left: 10px
+    p.last
+      +last
+  .bigrow
+    +column(18)
+    +last
+    p.big
+      +column(13)
+      label
+        float: left
+        width: 100px
+        margin-right: 10px
+        text-align: left
+      textarea
+        width: 350px
+        height: 100px
+        margin-left: 10px
+    p.small
+      +column(5)
+      +last
+      input
+        margin-top: 80px
+  .form-notice
+    +column(18)
+    p
+      color: #cccccc
+      margin-left: 120px
+
+#notice
+  +push(5)
+  +column(6)
+  +last
+  background-color: #bfbfbf
+  text-align: center
+  vertical-align: middle
+  font-weight: bold
+  font-size: 14px
+  padding: 5px
+#error
+  +push(5)
+  +column(6)
+  +last
+  background-color: #ff0000
+  text-align: center
+  vertical-align: middle
+  font-weight: bold
+  font-size: 14px
+  padding: 5px
+
+#searchform
+  #checkboxes
+    .checkbox
+      width: 175px
+      float: left
+  #textfields
+    padding-top: 10px
+    .textfield
+      float: left
+      width: 350px
+      padding-top: 10px
+      label
+        width: 50px
+        float: left
+      input
+        margin-left: 50px
+#results
+  padding-top: 20px
+  .header
+    +column($blueprint_grid_columns * 0.25, true)
+    +push(6)
+    h3
+      font-size: 16px
+      line-height: 18px
+      //padding-top: 10px
+      color: #b3bbbd
+  ul
+    list-style: none
+    font-size: 12px
+    padding: 20px 0
+    margin: 0
+    li
+      padding-bottom: 20px
+      padding-left: 0
+      margin-left: 0
+      img
+        width: 100px
+        float: left
+      div
+        margin-left: 110px
+        h4
+          font-size: 12px
+          font-family: $blueprint_font_family
+        a
+          color: red
+  .pagination
+    padding-bottom: 10px
+    .current
+      color: red
+#per-page
+  +column(9)
+.pagination
+  +column(9)
+  +last
+  text-align: right
+#admin
+  #wrapper
+    background-image: url(/images/bps_logo.png)
+    background-repeat: no-repeat
+    background-position: top right
+  #notice
+    +column($blueprint_grid_columns, true)
+    background: #FFF6BF
+    border: 2px solid #FFD324
+    text-align: center
+    margin: 10px auto
+    padding: 5px
+  #error
+    +column($blueprint_grid_columns, true)
+    background: #FFD6BF
+    border: 2px solid #FF5824
+    text-align: center
+    margin: 10px auto
+    padding: 5px
+  ol#cases-list
+    width: 500px
+    li.case
+      background-color: #edefef
+      list-style: none
+      img.case-thumb
+        vertical-align: middle
+      margin-top: 5px
+      margin-bottom: 5px
+  ol#slides-list
+    width: 500px
+    li.slide
+      background-color: #edefef
+      list-style: none
+      height: 150px
+      img.slide-thumb
+        vertical-align: middle
+      margin-top: 5px
+      margin-bottom: 5px
+
+  label
+    float: left
+    width: 14em
+    margin-right: 1em
+    text-align: right
+  #cropwrap
+    +column(18,true)
+  table#download-categories-list
+    td.category-image
+      width: 140px
+      height: 140px
+.ui-state-highlight
+  list-style: none
+  border-color: #c6cdce
+  background: #edefef
+  height: 70px
+.ui-state-highlight-slides
+  list-style: none
+  border-color: #c6cdce
+  background: #edefef
+  height: 150px
+.ui-state-highlight-categories
+  list-style: none
+  border-color: #c6cdce
+  background: #edefef
+  height: 100px
+
+ol#terms
+  li
+    list-style: none
+    margin-left: 36px
+    text-align: justify
+  ol
+    margin-left: 0
+    li
+      margin-left: 0
+      margin-bottom: 10px
+  h3
+    margin-top: 14px
+    margin-bottom: 14px
+  
+.translation_missing
+  background-color: yellow
+.current-locale
+  text-decoration: underline
+.cluetip-default
+  background-color: white
+  border: 1px solid black
+  #cluetip-title
+    margin: 0 0 5px
+    padding: 8px 10px 4px
+    font-size: 1.1em
+    font-weight: normal
+  #cluetip-outer
+    position: relative
+    background-color: white
+  #cluetip-inner
+    padding: 10px
+
+ul#download-categories
+  img
+    float: left
+  h3
+    padding-left: 150px
+    font-size: 16px
+  li
+    list-style: none
+    float: left
+    padding-bottom: 30px
+    +column(8)
+
+ul#download-list
+  img
+    float: left
+  h3
+    padding-left: 110px
+    font-size: 16px
+  p
+    margin-top: 65px
+    padding-left: 110px
+  li
+    list-style: none
+    float: left
+    padding-bottom: 30px
+    +column(8)
+
+.huge
+  font-size: 50px
+  line-height: 50px
+  float: left
+  margin-right: 15px
+  
+#caption
+  margin-top: 14px
+
+#landingpage
+  margin-bottom: 1em
+  
+ul
+  li.job
+    font-weight: bold

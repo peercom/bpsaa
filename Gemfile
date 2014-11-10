@@ -16,9 +16,14 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
+gem 'rmagick', :require => 'RMagick'
 gem 'carrierwave'
-gem 'rmagick'
 gem 'paper_trail'
+gem 'delayed_job_active_record'
+gem 'haml'
+gem 'compass-rails'
+gem 'compass-blueprint'
+gem 'rails-i18n'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
