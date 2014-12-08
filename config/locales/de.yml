@@ -147,6 +147,32 @@ de:
       article:
         one: Artikel
         other: Artikel
+    attributes:
+      article:
+        article_number: Artikelnummer
+        length: Länge
+        suspension_distance: Aufhängungsabstand
+        lamp: Leuchtmittel
+        weight: Gewicht
+        ceiling_cutout: Deckenausschnitt
+        luminous_flow: Lichtstrom
+        space_required: Platzbedarf
+        efficiency: Energieeffizienz
+        product: Produkt
+      product:
+        system: System
+        versions: Versionen
+        image: Bild
+        description: Beschreibung
+        articles: Artikel
+        assembly_instruction: Montageanleitung
+      system:
+        products: Produkte
+        category: Kategorie
+      category:
+        category_icon: Kategorie Icon
+        systems: Systeme
+        versions: Versionen
   formtastic:
     yes: "Ja"
     no: "Nein"
