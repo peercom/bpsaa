@@ -155,11 +155,16 @@ de:
         lamp: Leuchtmittel
         weight: Gewicht
         ceiling_cutout: Deckenausschnitt
-        luminous_flow: Lichtstrom
+        luminous_flow: Leuchtenlichtstrom
         space_required: Platzbedarf
         efficiency: Energieeffizienz
         product: Produkt
         transformer: Netzgerät
+        height: Höhe
+        description: Beschreibung
+        diameter: Durchmesser
+        dimensions: Maße
+        light_temperature: Lichtfarbe
       product:
         system: System
         versions: Versionen
@@ -167,6 +172,7 @@ de:
         description: Beschreibung
         articles: Artikel
         assembly_instruction: Montageanleitung
+        sectional_view: Schnittbild
       system:
         products: Produkte
         category: Kategorie
