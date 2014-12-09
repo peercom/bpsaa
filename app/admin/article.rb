@@ -31,6 +31,8 @@ ActiveAdmin.register Article do
   end
   
   filter :product, :as => :select, :collection => proc { Product.order(:system_id).order(:name).map{|p| ["#{p.system.category.name}: #{p.system.name}, #{p.name}", p.id]}}
+  filter :article_number
+  filter :name
   
   ActiveAdmin.register Article do
       menu :parent => "Produkte", :priority => 15

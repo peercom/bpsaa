@@ -159,6 +159,7 @@ de:
         space_required: Platzbedarf
         efficiency: Energieeffizienz
         product: Produkt
+        transformer: Netzgerät
       product:
         system: System
         versions: Versionen

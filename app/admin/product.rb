@@ -25,6 +25,7 @@ ActiveAdmin.register Product do
       actions
   end
   
+  filter :system, :as => :select
   
   ActiveAdmin.register Product do
       menu :parent => "Produkte", :priority => 14

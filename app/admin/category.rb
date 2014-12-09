@@ -14,6 +14,7 @@ ActiveAdmin.register Category do
   #  permitted
   # end
   
+  filter :name
   
   ActiveAdmin.register Category do
       menu :parent => "Produkte", :priority => 12
