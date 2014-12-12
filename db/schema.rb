@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141212095133) do
+ActiveRecord::Schema.define(version: 20141212110953) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -64,7 +64,6 @@ ActiveRecord::Schema.define(version: 20141212095133) do
     t.string   "led"
     t.string   "color"
     t.integer  "angle"
-    t.string   "holder"
     t.integer  "space_required"
     t.string   "head"
     t.string   "dimensions"
