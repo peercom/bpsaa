@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141025165104) do
+ActiveRecord::Schema.define(version: 20141212095133) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -58,10 +58,7 @@ ActiveRecord::Schema.define(version: 20141025165104) do
     t.integer  "degrees"
     t.string   "fitting"
     t.string   "systemtype"
-    t.string   "housing"
-    t.string   "ceiling_cutout"
     t.integer  "height"
-    t.integer  "weight"
     t.integer  "opening"
     t.integer  "diameter"
     t.string   "led"
